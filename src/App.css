@@ -1,18 +1,10 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
 ul {
   list-style-type: none;
-}
-
-.bodyWrapper {
-  background-color: #ebd9de;
-  border-radius: 20px;
-  padding: 50px;
-  display: flex;
-  gap: 50px;
 }
