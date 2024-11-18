@@ -55,7 +55,9 @@ const LoginPage = () => {
             />
           </label>
 
-          <button type="submit">Log In</button>
+          <button type="submit" className={css.logInBtn}>
+            Log In
+          </button>
         </Form>
       </Formik>
     </div>

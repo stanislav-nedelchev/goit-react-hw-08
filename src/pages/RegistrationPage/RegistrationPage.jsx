@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { RegisterUserSchema } from '../../utils/schemas';
 import { apiRegisterUser } from '../../redux/auth/operations';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import css from './RegistrationPage.module.css';
 
 const INITIAL_VALUES = {
@@ -25,7 +25,6 @@ const RegistrationPage = () => {
           toast.error('User with this email already exists!!');
         }
       });
-    console.log('values reg', values);
     actions.resetForm();
   };
 
@@ -80,9 +79,12 @@ const RegistrationPage = () => {
             />
           </label>
 
-          <button type="submit">Sign Up</button>
+          <button type="submit" className={css.signUpBtn}>
+            Sign Up
+          </button>
         </Form>
       </Formik>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };

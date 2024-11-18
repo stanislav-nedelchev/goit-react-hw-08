@@ -1,3 +1,5 @@
-/* .navigation {
+.navigation {
   display: flex;
-} */
+  gap: 100px;
+  align-items: center;
+}

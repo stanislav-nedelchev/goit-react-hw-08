@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import AppPhonebook from '../AppPhonebook/AppPhonebook';
+import css from './Layout.module.css';
 
 const Layout = () => {
   return (
@@ -7,7 +8,9 @@ const Layout = () => {
       <div>
         <AppPhonebook />
         <main>
-          <Outlet />
+          <div className={css.mainBox}>
+            <Outlet />
+          </div>
         </main>
       </div>
     </div>
